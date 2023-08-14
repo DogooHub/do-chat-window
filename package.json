@@ -1,7 +1,7 @@
 {
   "name": "do-chat-window",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "Chat window for products of Dogoo Office",
   "author": "longnvse",
   "license": "MIT",
   "repository": "longnvse/do-chat-window",
