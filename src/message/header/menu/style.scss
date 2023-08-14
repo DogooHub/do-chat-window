@@ -1,0 +1,26 @@
+.do-menu {
+  & .ant-menu-item {
+    display: flex !important;
+    align-items: center;
+    padding-inline: 8px;
+    gap: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+
+    & .ant-menu-item-icon {
+      width: fit-content;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    & .ant-menu-title-content {
+      margin: 0 !important;
+      min-width: 0;
+      width: 100%;
+      //display: block;
+    }
+  }
+}

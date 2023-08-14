@@ -1,0 +1,6 @@
+.menu--flex {
+  & .ant-menu-title-content {
+    min-width: 0;
+    width: 100%;
+  }
+}

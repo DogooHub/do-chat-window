@@ -1,0 +1,9 @@
+.message-item {
+  & .message-toolbar {
+    visibility: hidden;
+  }
+
+  &:hover .message-toolbar {
+    visibility: visible;
+  }
+}

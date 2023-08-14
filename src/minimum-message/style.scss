@@ -1,0 +1,15 @@
+.minimum-message-popover {
+  & .ant-popover-inner {
+    padding: 0;
+  }
+
+  & .ant-popover-inner-content {
+    padding: 0;
+  }
+}
+
+.ant-menu-item {
+  &:has(.menu-member:hover) {
+    background-color: unset !important;
+  }
+}
