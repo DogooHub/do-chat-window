@@ -61,10 +61,10 @@ const WindowMessageHeader = ({conversation = {}}) => {
     const description = useMemo(() => {
         if (conversation.conversationType === SessionType.Group || conversation.conversationType === SessionType.SuperGroup) {
             return (
-                <>
+                <React.Fragment>
                     <BiGroup size={16}/>
                     {groupInfo.memberCount || 0}
-                </>
+                </React.Fragment>
             );
         }
 

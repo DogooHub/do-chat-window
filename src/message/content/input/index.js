@@ -84,7 +84,7 @@ const WindowMessageContentInput = ({
             <Upload
                 showUploadList={false}
                 multiple={true}
-                beforeUpload={(file, fileList) => {
+                beforeUpload={(file) => {
                     onAddUploadFile(file);
                     return false;
                 }}

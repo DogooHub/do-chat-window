@@ -27,7 +27,7 @@ const MessageItemContent = ({ item = {}, border, isMine }) => {
         }
     }, [item, border]);
 
-    return <>{renderContent}</>;
+    return <React.Fragment>{renderContent}</React.Fragment>;
 };
 
 MessageItemContent.propTypes = {};

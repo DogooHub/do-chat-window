@@ -10,14 +10,14 @@ const FormDeleteMessage = ({
                            }) => {
     const onFinish = ({type}) => {
         if (type === 'revoke') {
-            openIM.revokeMessage(message).then((res) => {
+            openIM.revokeMessage(message).then(() => {
                 onCloseModal();
             });
 
             return;
         }
 
-        openIM.deleteMessageFromLocalStorage(JSON.stringify(message)).then((res) => {
+        openIM.deleteMessageFromLocalStorage(JSON.stringify(message)).then(() => {
             onCloseModal();
         });
     };

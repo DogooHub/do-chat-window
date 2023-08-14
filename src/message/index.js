@@ -13,7 +13,7 @@ const WindowMessage = ({conversation}) => {
         onClick();
     }, [conversation]);
 
-    const onClick = (e) => {
+    const onClick = () => {
         inputRef.current?.focus();
     }
 

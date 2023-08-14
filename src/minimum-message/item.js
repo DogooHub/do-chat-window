@@ -5,7 +5,7 @@ import {FloatButton} from "antd";
 import ButtonToolbar from "../common/button-toolbar";
 import {IoClose} from "react-icons/io5";
 import {FROM, useChatWindowContext} from "../index";
-import {parse} from "../services/utils";
+import {getMe, parse} from "../services/utils";
 import {renderContentConversation} from "../services/im/utils";
 
 const MinimumMessage = ({conversation={}, disable = false}) => {

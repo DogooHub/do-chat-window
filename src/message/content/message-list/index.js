@@ -21,7 +21,7 @@ const MessageList = ({conversation = {}, onSend}) => {
     useEffect(() => {
         const {groupID, userID} = conversation;
         if (groupID || userID) {
-            loadMessages().then(res => {
+            loadMessages().then(() => {
                 setMessages(prevState => {
                     markasread(prevState);
                     return prevState;
@@ -239,7 +239,7 @@ const MessageList = ({conversation = {}, onSend}) => {
             className={"px-1 overflow-x-hidden overflow-y-auto"}
         >
             {renderListMessage}
-            {userTyping ? <Typing faceURL={conversation.faceURL}/> : <></>}
+            {userTyping ? <Typing faceURL={conversation.faceURL}/> : <React.Fragment></React.Fragment>}
         </InfiniteScrollContainer>
     );
 };

@@ -4,7 +4,7 @@ import ConversationList from "./conversation";
 import AccountList from "./account";
 import WorkGroup from "./group-work";
 import "./style.scss"
-const WindowChatContent = props => {
+const WindowChatContent = () => {
 
     const {token: {colorPrimary, colorTextLightSolid}} = theme.useToken();
 

@@ -36,7 +36,7 @@ const FormGroupName = ({
             groupInfo: {
                 groupName: values.name
             }
-        }).then(r => {
+        }).then(() => {
             onCloseModal();
         }).catch(error_handle)
     }

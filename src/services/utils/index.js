@@ -65,11 +65,6 @@ export const pushNotification = ({tag, content}) => {
     }
   });
 };
-
-export const strSplice = (str = '', start, count, insertStr = '') => {
-  return str.slice(0, start) + insertStr + str.slice(start + Math.abs(count));
-}
-
 export function utf8ToAscii(input) {
   return input
     .normalize('NFD')

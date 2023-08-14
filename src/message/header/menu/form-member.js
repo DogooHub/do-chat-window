@@ -8,6 +8,7 @@ import {CbEvents} from 'open-im-sdk';
 import IMAvatar from "../../../common/avatar";
 import {error_handle, openIM} from "../../../services/im";
 import {getAllAccounts} from "../../../services/axios";
+import {useChatWindowContext} from "../../../index";
 
 const ContainerHeight = 400;
 const pageSize = 20;
@@ -21,7 +22,7 @@ const FormAddMember = ({
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
     const [loading, setLoading] = useState({list: false, submit: false});
-
+    const {axios} = useChatWindowContext();
     const onClickAddMember = () => {
         setLoading((prevState) => ({list: prevState.list, submit: true}));
         openIM
@@ -55,7 +56,7 @@ const FormAddMember = ({
 
     function loadAccounts(searchValue) {
         setLoading((prevState) => ({list: true, submit: prevState.submit}));
-        getAllAccounts("status eq 'approved'", page, pageSize, searchValue, null).then(
+        getAllAccounts(axios, "status eq 'approved'", page, pageSize, searchValue, null).then(
             (response) => {
                 openIM
                     .getGroupMembersInfo({
@@ -203,7 +204,7 @@ const FormAddMember = ({
                                                 // }}
                                             />
                                         }
-                                        title={<a href='https://ant.design'>{item.fullname}</a>}
+                                        title={item.fullname}
                                         description={item.email}
                                     />
                                     <div>

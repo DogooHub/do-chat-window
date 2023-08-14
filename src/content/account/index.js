@@ -12,7 +12,7 @@ const AccountList = props => {
     const [accounts, setAccounts] = useState([]);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
-    const {onChangeStatus, onAddPopupMessage} = useChatWindowContext();
+    const {onChangeStatus, onAddPopupMessage, axios} = useChatWindowContext();
 
     useEffect(() => {
         if (accounts.length > 0) {
@@ -35,7 +35,7 @@ const AccountList = props => {
     };
 
     const loadAccounts = async (pageCount = page) => {
-        const accountRes = await getAllAccounts(null, pageCount, pageSize);
+        const accountRes = await getAllAccounts(axios, null, pageCount, pageSize);
         await setPage((prevState) => prevState + 1);
 
         await setAccounts((prevState) => [...prevState, ...accountRes.items]);

@@ -10,7 +10,7 @@ const ButtonEmoji = ({
                          }
                      }) => {
     return (
-        <>
+        <React.Fragment>
             <Popover
                 content={
                     <EmojiPicker
@@ -53,7 +53,7 @@ const ButtonEmoji = ({
                     // onClick={(e) => e.stopPropagation()}
                     icon={<BiSolidSmile size={24}/>}/>
             </Popover>
-        </>
+        </React.Fragment>
     );
 };
 

@@ -8,7 +8,7 @@ import {Tooltip} from "antd";
 import MessageDetailToolBar from "./toolbar";
 import "./message-item.scss"
 import {getMe} from "../../../../services/utils";
-import {getOrderMessage, MESSAGE_ORDER, MESSAGE_ORDER_BORDER} from "../../../../services/im/utils";
+import {getOrderMessage, isGroup, MESSAGE_ORDER, MESSAGE_ORDER_BORDER} from "../../../../services/im/utils";
 
 const MessageItem = ({
                          prevItem = {},
@@ -72,7 +72,7 @@ const MessageItem = ({
 
     const showName = useMemo(() => {
         if (isMine || item.sessionType !== 2) {
-            return <></>;
+            return <React.Fragment></React.Fragment>;
         }
         const order = getOrderMessage(prevItem, item, nextItem);
 
@@ -84,7 +84,7 @@ const MessageItem = ({
             );
         }
 
-        return <></>;
+        return <React.Fragment></React.Fragment>;
     }, [item]);
 
     return (

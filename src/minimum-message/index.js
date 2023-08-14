@@ -16,7 +16,7 @@ const MinimumMessageList = ({minimumPopupMessages = []}) => {
     }, [minimumPopupMessages]);
 
 
-    return <>
+    return <React.Fragment>
         {showMinimumMessages.map((item =>
                 <MinimumMessage key={item.conversationID} conversation={item}/>
         ))}
@@ -43,7 +43,7 @@ const MinimumMessageList = ({minimumPopupMessages = []}) => {
             </div>
         </Popover>}
 
-    </>
+    </React.Fragment>
 };
 
 MinimumMessageList.propTypes = {};

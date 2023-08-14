@@ -13,8 +13,7 @@ const NewMessageContent = ({users = []}) => {
     const {replaceNewMessage} = useChatWindowContext();
     const onSend = async (
         value,
-        type = 'text',
-        here = true
+        type = 'text'
     ) => {
 
         const newGroupRes = await openIM.createGroup({
@@ -76,7 +75,7 @@ const NewMessageContent = ({users = []}) => {
                 </div>
                 <WindowMessageContentInput onSend={onSend}/>
             </div>
-            : <></>
+            : <React.Fragment></React.Fragment>
     );
 };
 
