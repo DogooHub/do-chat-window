@@ -1,7 +1,7 @@
 import React, {createContext, useContext, useEffect, useMemo, useState} from 'react';
 import {FloatButton} from "antd";
-import "./index.module.scss"
-import "./ckeditor5.module.scss"
+import "./index.scss"
+import "./ckeditor5.scss"
 import WindowChatTitle from "./title";
 import dayjs from "dayjs";
 import isToday from 'dayjs/plugin/isToday';
