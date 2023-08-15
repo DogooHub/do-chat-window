@@ -1,10 +1,13 @@
 {
   "name": "do-chat-window",
-  "version": "1.1.24",
+  "version": "0.0.2",
   "description": "Chat window for products of Dogoo Office",
   "author": "longnvse",
   "license": "MIT",
-  "repository": "https://github.com/DogooHub/do-chat-window",
+  "repository": {
+    "type": "gitlab",
+    "url": "https://gitlab.dogoo.vn/longhip/do-chat-window"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -12,8 +15,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs --jsxFragment React.Fragment",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs --jsxFragment React.Fragment",
+    "build": "microbundle-crl --no-compress --format modern,cjs --css-modules true",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --css-modules true",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
